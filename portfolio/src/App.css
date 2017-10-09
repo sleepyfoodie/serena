@@ -1,0 +1,103 @@
+body {
+  font-size: 100%;
+  font-family: palatino;
+}
+
+.Top {
+  background-image: url('./image/top.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  margin-top: -32px;
+}
+
+#intro h1 {
+  padding: 4%;
+  display: inline-block;
+  position: relative;
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+}
+
+
+#typing {
+  display: inline-block;
+  position: relative;
+  margin-left: -6%;
+  font-family: 'Pacifico', cursive;
+}
+
+@media only screen and (max-width: 750px) {
+  #typing {
+    display: block;
+    position: relative;
+    margin-left: 0%;
+    top: -90px;
+  }
+  #intro h1 {
+    position: relative;
+    display: block;
+  }
+}
+
+.About.Left{
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  background-color: #191923;
+  color: #0892a5;
+  height: 500px;
+  vertical-align: top;
+  padding-top: 5%;
+}
+.About.Right{
+  background-image: url('./image/mug.jpg');
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  background-position: 60%;
+  height: 500px;
+  vertical-align: top;
+  padding-top: 5%;
+}
+
+#right {
+  text-align: center;
+  margin-left: -100%;
+  height: 500px;
+  margin-top: 10vh;
+}
+#left {
+  text-align: left;
+}
+
+.scroll {
+  display: none;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.About h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 4em;
+  color: #32936f;
+}
+
+#right h1 {
+  font-size: 8em;
+}
+.End {
+    background-image: url('./image/forest.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    margin-top: -21px;
+}
+
+::-webkit-scrollbar              { background-color: black; width: 2px; }
+::-webkit-scrollbar-button       { background-color: black; width: 2px; }
+::-webkit-scrollbar-track        { background-color: black; width: 2px;}
+::-webkit-scrollbar-track-piece  { background-color: black; width: 2px;}
+::-webkit-scrollbar-thumb        { background-color: black; width: 2px;}
+::-webkit-scrollbar-corner       { background-color: black; width: 2px;}
+::-webkit-resizer                { background-color: black; width: 2px;}
