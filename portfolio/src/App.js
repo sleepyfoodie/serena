@@ -118,8 +118,9 @@ class App extends Component {
                 <div id="scroll">
                   <Col xs={12} sm={8} md={8}><h4>In 2017, I enrolled in Brain Station to get my Full-Stack Web Development Certificate.
                     <p>Before my enrollment, I grew an interest in html and css. I wanted to build a website from scratch,
-                    but felt frustrated that I did not have the tools to do so. I am very happy that I have taken this course
-                    as it has allowed me to build new skills for a web app.</p>
+                    and was motivated to learn the skills I needed. I am very happy that I have taken this course
+                    as it has allowed me to build the skill sets I needed for a web app. 
+                    Please take a look at my <span><a href="#Project">Projects</a></span> below for reference.</p>
                   </h4></Col>
                 </div>
               </Grid>
