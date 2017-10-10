@@ -188,6 +188,7 @@ button.dropdown-toggle.btn.btn-default {
 @media only screen and (max-width: 850px) {
   .About.Right {
     width: 0%;
+    overflow-x: hidden;
   }
   .About.Left {
     width: 100%;
@@ -221,6 +222,9 @@ button.dropdown-toggle.btn.btn-default {
   animation-duration: 5s;
   animation-fill-mode: both;
   -webkit-animation-fill-mode: forwards;
+}
+.Stack p {
+  text-align: center;
 }
 .rotateIn {
   animation: rotateIn;
@@ -323,7 +327,7 @@ a:hover {
 
 
 .Project {
-  padding: 3% 3% 3% 3%;
+  padding: 3% 3% 10% 3%;
   background-color: #b5c2b7;
 }
 .Project img {
@@ -358,11 +362,24 @@ a:hover {
   color: #fbfef9;
   font-family: 'Pacifico',cursive;
   font-size: 8em;
+  position: relative;
+  display: inline-block;
 }
 .End h2 {
   font-family: 'Pacifico', cursive;
   color: #fbfef9;
-
+  position: relative;
+  display: inline-block;
+  margin-right: 6%;
+}
+.End a {
+  color: #fbfef9;
+}
+#link:hover {
+  animation: pulse;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  display: inline-block;
 }
 
 .social a {

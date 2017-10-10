@@ -8,6 +8,7 @@ import viva from './image/viva.png';
 import paulkei from './image/paulkei.png';
 import jollyhippo from './image/jollyhippo.png';
 import blackjack from './image/blackjack.png';
+import resume from './image/SerenaResumeWD.pdf';
 
 //icon
 import email from './image/email.png';
@@ -318,7 +319,7 @@ class App extends Component {
         <div className="End" id="End">
           <h1>Contact Me</h1>
           <br></br>
-          <h2>cerynaa@gmail.com</h2>
+          <h2>cerynaa@gmail.com</h2><h2><a target="_blank" href={resume}><span id="link">resume</span></a></h2>
           <br></br>
           <br></br>
           <Grid>
