@@ -48,6 +48,7 @@ class App extends Component {
     }
     this.rotateIn = this.rotateIn.bind(this)
     this.rotateOut = this.rotateOut.bind(this)
+    this.alert = this.alert.bind(this)
   }
 
   rotateIn() {
@@ -60,6 +61,10 @@ class App extends Component {
     this.setState({
       mouse: false
     })
+  }
+
+  alert() {
+      alert("Hi there, resumés are a tad bit personal to me. If you could send me an email and tell me a little bit about yourself, I would be happy to provide you with that. Thank you for understanding :)");
   }
 
 
@@ -80,8 +85,9 @@ class App extends Component {
             </h1>
           </div>
           <div id="menu">
-            <h1>&lt;
+            <h1 id="pencil">&lt;
               <img
+                id="pencilImg"
                 src={pencil}
                 onMouseOver={this.rotateIn}
                 onMouseLeave={this.rotateOut}
@@ -136,13 +142,7 @@ class App extends Component {
 
         <div className="Stack" id="Stack">
           <Grid>
-            <Col xs={12} sm={12} md={12}><h1>My Expertise <span id="spin">&lt;
-              <img
-                src={pencil}
-                onMouseOver={this.rotateIn}
-                onMouseLeave={this.rotateOut}
-                className={(this.state.mouse === false) ? "rotateOut" : 'rotateIn'} />
-              &gt;</span></h1>
+            <Col xs={12} sm={12} md={12}><h1>My Expertise</h1>
             </Col>
           </Grid>
           <Grid>
@@ -207,27 +207,19 @@ class App extends Component {
         <div className="Work" id="Work">
           <Grid>
             <Col xs={12} sm={12} md={12}>
-              <div id="workTitle"><h1>My Work
-              <span id="spin"> &lt;
-              <img
-                    src={pencil}
-                    onMouseOver={this.rotateIn}
-                    onMouseLeave={this.rotateOut}
-                    className={(this.state.mouse === false) ? "rotateOut" : 'rotateIn'} />
-                  &gt;</span>
-              </h1></div>
+              <div id="workTitle"><h1>My Work</h1></div>
             </Col>
           </Grid>
           <Grid>
             <Col xs={12} sm={6} md={6}>
-              <div id="screenshot">
-                <a target="_blank" href="www.paulkei.surge.sh"><img src={paulkei} /></a>
+              <div id="screenshot"><span id="link">
+                <a target="_blank" href="https://www.paulkei.surge.sh"><img src={paulkei} /></a></span>
               </div>
             </Col>
             <Col xs={12} sm={6} md={6}>
               <div id="harbour">
-                <a target="_blank" href="www.paulkei.surge.sh">
-                  <h1>Harbour Building</h1>
+                <a target="_blank" href="https://www.paulkei.surge.sh">
+                  <h1><span id="link">Harbour Building</span></h1>
                 </a>
                 <br></br>
                 <h4><b>Frontend development. Web design</b></h4>
@@ -245,8 +237,8 @@ class App extends Component {
           </Grid>
           <Grid>
             <Col xs={12} sm={6} md={6}>
-              <a target="_blank" href="www.vivafinefoods.surge.sh">
-                <h1>Viva Fine Foods</h1>
+              <a target="_blank" href="https://www.vivafinefoods.surge.sh">
+                <h1><span id="link">Viva Fine Foods</span></h1>
               </a>
               <br></br>
               <h4><b>Frontend development.Web design</b></h4>
@@ -255,8 +247,8 @@ class App extends Component {
                 by Kitsilano beach, Viva Fine Foods & Bakery offers some of the best coffee and pastry in town. </h4>
             </Col>
             <Col xs={12} sm={6} md={6}>
-              <div id="screenshot">
-                <a target="_blank" href="www.vivafinefoods.surge.sh"><img src={viva} /></a>
+              <div id="screenshot"><span id="link">
+                <a target="_blank" href="https://www.vivafinefoods.surge.sh"><img src={viva} /></a></span>
               </div>
             </Col>
           </Grid>
@@ -264,23 +256,17 @@ class App extends Component {
 
 
         <div className="Project" id="Project">
-          <h1>Projects &lt;
-              <img
-              src={pencil}
-              onMouseOver={this.rotateIn}
-              onMouseLeave={this.rotateOut}
-              className={(this.state.mouse === false) ? "rotateOut" : 'rotateIn'} />
-            &gt;</h1>
+          <h1>Projects</h1>
           <br></br>
           <br></br>
 
           <Grid>
             <Row>
               <Col xs={12} sm={6} md={6}>
-                <a tartget="_blank" href="http://35.164.174.126/"><img src={jollyhippo} /></a>
+                <span id="link"><a tartget="_blank" href="http://35.164.174.126/"><img src={jollyhippo} /></a></span>
               </Col>
               <Col xs={12} sm={6} md={6}>
-                <h1><a target="_blank" href="http://35.164.174.126/">Jolly Hippo</a></h1>
+                <h1><span id="link"><a target="_blank" href="http://35.164.174.126/">Jolly Hippo</a></span></h1>
                 <br></br>
                 <h4><b>MongoDB, Express, Axios, ReactJS, NodeJS, AWS</b></h4>
                 <br></br>
@@ -297,7 +283,7 @@ class App extends Component {
             <br></br>
             <Row>
               <Col xs={12} sm={6} md={6}>
-                <h1><a target="_blank" href="https://github.com/sleepyfoodie/pairedprogrammingproject">Black Jack</a></h1>
+                <h1><span id="link"><a target="_blank" href="https://github.com/sleepyfoodie/pairedprogrammingproject">Black Jack</a></span></h1>
                 <br></br>
                 <h4><b>Frontend development, HTML, CSS, Javascript</b></h4>
                 <br></br>
@@ -309,8 +295,8 @@ class App extends Component {
                       </h4>
               </Col>
               <Col xs={12} sm={6} md={6}>
-                <a target="_blank" href="https://github.com/sleepyfoodie/pairedprogrammingproject">
-                  <img src={blackjack} /></a>
+                <span id="link"><a target="_blank" href="https://github.com/sleepyfoodie/pairedprogrammingproject">
+                  <img src={blackjack} /></a></span>
               </Col>
             </Row>
           </Grid>
@@ -319,7 +305,8 @@ class App extends Component {
         <div className="End" id="End">
           <h1>Contact Me</h1>
           <br></br>
-          <h2>cerynaa@gmail.com</h2><h2><a target="_blank" href={resume}><span id="link">resume</span></a></h2>
+          <a href="mailto:cerynaa@gmail.com"><h2 id="link">cerynaa@gmail.com</h2></a>
+          <h2><span id="link" onClick={this.alert}>resume</span></h2>
           <br></br>
           <br></br>
           <Grid>

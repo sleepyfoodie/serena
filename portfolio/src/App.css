@@ -1,7 +1,10 @@
 body {
   font-size: 100%;
-  font-family: palatino;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   overflow-x: hidden;
+}
+a {
+  color: #191923;
 }
 
 .Top {
@@ -9,7 +12,12 @@ body {
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  margin-top: -32px;
+  margin-top: 0px;
+  overflow-y: hidden;
+}
+
+.Top a {
+  color: #0892a5;
 }
 
 #intro h1 {
@@ -18,30 +26,39 @@ body {
   position: relative;
   font-family: 'Pacifico', cursive;
   font-size: 3em;
+  top:-25px;
 }
-
 
 #typing {
   display: inline-block;
   position: relative;
   margin-left: -6%;
+  margin-top: -7%;
   font-family: 'Pacifico', cursive;
+  color: #395e66
 }
 .Top img {
   width: 35px;
   height: 50px;
 }
 #menu {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 20px;
+  z-index: 3;
+}
+#pencil {
+  transition: all 0.4s ease-in-out 0s;
 }
 #item {
   display: inline-block;
-  position: absolute;
-  top: 40px;
-  right: 40px;
+  position: fixed;
+  top: 28px;
+  right: 40px; 
   font-family: 'Pacifico', cursive;
+  z-index: 3;
+  font-size: 3em;
+  transition: all 0.4s ease-in-out 0s;
 }
 .dropdown-menu.dropdown-menu-right {
   background: none;
@@ -49,9 +66,11 @@ body {
   text-align: right;
   margin-right: -100%;
   box-shadow: none;
+  z-index: 3
 }
 button.dropdown-toggle.btn.btn-default {
   opacity: 0;
+  z-index: 3;
 }
 
 @media only screen and (max-width: 750px) {
@@ -70,6 +89,7 @@ button.dropdown-toggle.btn.btn-default {
 #scroll {
   color: #191923;
   transition: all 0.4s ease-in-out 0s;
+  font-size: 6em;
 }
 
 .About:hover .About.Left {
@@ -119,8 +139,9 @@ button.dropdown-toggle.btn.btn-default {
   }
 }
 .About {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 2px solid #191923;
+  border-bottom: 2px solid #191923;
+  z-index: 1;
 }
 .About.Left{
   position: relative;
@@ -203,6 +224,12 @@ button.dropdown-toggle.btn.btn-default {
   }
 }
 
+@media only screen and (min-width: 1788px) {
+  .About.Right{
+    background-position: right -10em top -130px;
+  }
+}
+
 .Stack {
   background-color: #fbfef9;
   margin-bottom: 7%;
@@ -210,6 +237,9 @@ button.dropdown-toggle.btn.btn-default {
 .Stack h1 {
   text-align: center;
   font-family: 'Pacifico', cursive;
+}
+.Stack h4 {
+  font-size: 2em;
 }
 .Stack h1 img {
   width: 40px;
@@ -281,8 +311,8 @@ button.dropdown-toggle.btn.btn-default {
   padding-top: 7%;
   padding-bottom: 7%;
   background-color: #32936f;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 2px solid #191923;
+  border-bottom: 2px solid #191923;
   padding-bottom: 10%;
 }
 
@@ -292,6 +322,7 @@ button.dropdown-toggle.btn.btn-default {
 }
 #workTitle h1 {
   font-size: 4em;
+  color: #191923
 }
 .Work#right {
   text-align: right;
@@ -299,12 +330,16 @@ button.dropdown-toggle.btn.btn-default {
 .Work h1 {
   font-family: 'Pacifico', cursive;
 }
+.Work h4 {
+  font-size: 2em;
+  color: #191923;
+}
 
 #screenshot img {
   width: 100%;
   height: 20%;
   border: 1px solid #191923;
-  box-shadow: 10px 10px 10px #191923;
+  box-shadow: 3px 3px 10px #191923;
 }
 #harbour {
   padding-left: 5%;
@@ -332,7 +367,7 @@ a:hover {
 }
 .Project img {
   width: 90%;
-  box-shadow: 10px 10px 10px #191923;
+  box-shadow: 3px 3px 10px #32936f;
 }
 .Project h1 {
   font-family: 'Pacifico', cursive;
@@ -348,6 +383,12 @@ a:hover {
 }
 .Project a {
   color: #191923;
+}
+.Project a:hover {
+  color: #395e66;
+}
+.Project h4 {
+  font-size: 2em;
 }
 
 .End {
@@ -400,10 +441,10 @@ a:hover {
 }
 
 
-::-webkit-scrollbar              { background-color: black; width: 2px; }
-::-webkit-scrollbar-button       { background-color: black; width: 2px; }
-::-webkit-scrollbar-track        { background-color: black; width: 2px;}
-::-webkit-scrollbar-track-piece  { background-color: black; width: 2px;}
-::-webkit-scrollbar-thumb        { background-color: black; width: 2px;}
-::-webkit-scrollbar-corner       { background-color: black; width: 2px;}
-::-webkit-resizer                { background-color: black; width: 2px;}
+::-webkit-scrollbar              { background-color: #191923; width: 2px; }
+::-webkit-scrollbar-button       { background-color: #191923; width: 2px; }
+::-webkit-scrollbar-track        { background-color: #191923; width: 2px;}
+::-webkit-scrollbar-track-piece  { background-color: #191923; width: 2px;}
+::-webkit-scrollbar-thumb        { background-color: #191923; width: 2px;}
+::-webkit-scrollbar-corner       { background-color: #191923; width: 2px;}
+::-webkit-resizer                { background-color: #191923; width: 2px;}

@@ -4,7 +4,28 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+window.onscroll = function() {
+    scrollFunction(); 
+    };
 
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 && document.documentElement.clientWidth < 750) {
+        document.getElementById("pencil").style.fontSize = "2em";
+        document.getElementById("pencil").style.marginTop = "80%";
+        document.getElementById("pencilImg").style.width = "25px";
+        document.getElementById("pencilImg").style.height = "30px";
+        document.getElementById("item").style.right = "30px";
+
+    }
+    else {
+        document.getElementById("pencil").style.fontSize = "2";
+        document.getElementById("pencil").style.marginTop = "";
+        document.getElementById("pencilImg").style.width = "";
+        document.getElementById("pencilImg").style.height = "";
+        document.getElementById("item").style.right = "";
+    }
+}
 
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
